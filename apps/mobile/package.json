@@ -1,0 +1,8 @@
+{
+  "name": "@fastdeck/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FastDeck Mobile — React Native application (planned)",
+  "scripts": {},
+  "dependencies": {}
+}

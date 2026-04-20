@@ -1,0 +1,26 @@
+{
+  "name": "@fastdeck/tools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FastDeck Tools — A monorepo for web, desktop, and mobile applications",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "yarn workspace @fastdeck/web dev",
+    "build:web": "yarn workspace @fastdeck/web build",
+    "dev:desktop": "yarn workspace @fastdeck/desktop dev",
+    "dev:mobile": "yarn workspace @fastdeck/mobile start",
+    "clean": "rm -rf node_modules apps/*/node_modules packages/*/node_modules",
+    "clean:dist": "rm -rf apps/*/dist apps/*/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FastDeck/tools.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

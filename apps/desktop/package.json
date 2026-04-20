@@ -1,0 +1,8 @@
+{
+  "name": "@fastdeck/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FastDeck Desktop — Electron.js application (planned)",
+  "scripts": {},
+  "dependencies": {}
+}
