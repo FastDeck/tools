@@ -9,6 +9,18 @@ NC='\033[0m' # No Color
 
 echo -e "${BLUE}--- FastDeck Conventional Commit Builder ---${NC}"
 
+# Check branch name
+CURRENT_BRANCH=$(git branch --show-current)
+if [[ "$CURRENT_BRANCH" == "main" ]]; then
+    echo -e "${RED}❌ Error: You are on the 'main' branch. Please switch to a feature branch (AmitRaikwar/...) before committing.${NC}"
+    exit 1
+fi
+
+if [[ ! "$CURRENT_BRANCH" =~ ^AmitRaikwar/ ]]; then
+    echo -e "${RED}❌ Error: Invalid branch name '$CURRENT_BRANCH'. Branch names must start with 'AmitRaikwar/'.${NC}"
+    exit 1
+fi
+
 # Check for staged changes
 if [ -z "$(git diff --cached --name-only)" ]; then
     echo -e "${YELLOW}⚠️  No changes staged for commit. Please stage changes using 'git add' first.${NC}"
